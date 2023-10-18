@@ -70,9 +70,14 @@ export class SiteBuilder {
           });
           
           const page = await browser.newPage();
-          await page.goto(options.origin + path, {
+          const res = await page.goto(options.origin + path, {
             waitUntil: 'networkidle2'
           });
+
+          if (res?.status() !== 200) {
+            throw res?.statusText();
+          }
+
           const str = await page.content();
 
           if (!path.endsWith("/index")) {
