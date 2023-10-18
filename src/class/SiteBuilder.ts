@@ -394,9 +394,7 @@ export class SiteBuilder {
     const paths: string[] = [];
     await trav(this.src(this.options.views.folder), {
       onFile: (parent, file) => {
-        paths.push(("/" + join(parent, file.name))
-          .replace(/(\.\w+)+$/, "")
-          .replace(/(?<=\/)index?$/, ""));
+        paths.push("/" + join(parent, file.name).replace(/(\.\w+)+$/, ""));
       }
     })
     return paths;
