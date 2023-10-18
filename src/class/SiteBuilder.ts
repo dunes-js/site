@@ -14,7 +14,7 @@ import type {
 import { copyFile, mkdir, rm } from "fs/promises";
 import { basename, dirname, join } from "path";
 import { WatchDir, readString, trav, writeStr } from "@dunes/sys";
-import { splitLast } from "@dunes/tools";
+import { splitLast } from "@dunes/tools/str";
 import puppeteer from "puppeteer";
 import jsb from "js-beautify";
 import { Bundler, type BundlerConfig } from "@dunes/bundle";
