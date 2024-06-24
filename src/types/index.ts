@@ -1,6 +1,6 @@
 import type { Bundle, BundlerConfig } from "@dunes/bundle"
 import type { Prom, Recommend } from "@dunes/tools"
-import type { SiteBuilder } from "src/index.js"
+import type { SiteBuilder } from "../class/SiteBuilder.js"
 
 
 export interface BuilderOptions {
